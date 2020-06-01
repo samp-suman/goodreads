@@ -8,7 +8,14 @@ from bs4 import BeautifulSoup
 API_KEY = "PV3GOHI0lJBNHlsS2CFxlw"
 URL = "https://www.goodreads.com/search/index.xml"
 
-TOKEN = 'NzE2NzAwOTg1MDY5OTI4NTYx.XtPzEQ.QecPXNcNvUs_XZeNj616HmMHOo8'
+
+def read_token():
+    with open("token.txt", "r") as f:
+        lines = f.readlines()
+        return lines[0].strip()
+
+
+TOKEN = read_token()
 
 class MyClient(discord.Client):
     async def on_ready(self):
