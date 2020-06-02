@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 
 
-API_KEY = "<your goodread api key>"
+API_KEY = "<your-goodreads-api-key>"
 URL = "https://www.goodreads.com/search/index.xml"
 
 
