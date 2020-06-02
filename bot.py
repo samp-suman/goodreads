@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 
 
-API_KEY = "PV3GOHI0lJBNHlsS2CFxlw"
+API_KEY = "<your goodread api key>"
 URL = "https://www.goodreads.com/search/index.xml"
 
 
@@ -157,7 +157,7 @@ def getAuthorDetails(author_id):
 
 
 def getUserDetails(username):
-    url = "https://www.goodreads.com/user/show.xml?id=false&key=PV3GOHI0lJBNHlsS2CFxlw&username={}".format(username)
+    url = "https://www.goodreads.com/user/show.xml?id=false&key={}&username={}".format(API_KEY,username)
     res = requests.get(url)
     if res:
         raw = BeautifulSoup(res.content,'xml')
